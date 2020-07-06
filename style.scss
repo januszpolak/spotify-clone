@@ -1,5 +1,6 @@
 $primary-color: white;
 $btn-color: #1db954;
+$hover-color: #66d862;
 $main-font-size: 80px;
 $font-family: "Helvetica";
 
@@ -8,6 +9,13 @@ $font-family: "Helvetica";
   padding: 0;
   box-sizing: border-box;
   font-family: $font-family;
+}
+a {
+  text-decoration: none;
+  color: white;
+  &:hover {
+    color: $hover-color;
+  }
 }
 .header {
   position: fixed;
@@ -32,13 +40,6 @@ $font-family: "Helvetica";
     li {
       list-style: none;
       padding: 28px 17px;
-    }
-    a {
-      text-decoration: none;
-      color: white;
-      &:hover {
-        color: #66d862;
-      }
     }
   }
 }
@@ -131,6 +132,98 @@ $font-family: "Helvetica";
   }
 }
 footer {
+  position: relative;
   height: 85vh;
   background-color: rgb(0, 0, 0);
+  overflow: hidden;
+  .footer_wrapper {
+    position: absolute;
+    top: 15%;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 25px;
+    .logo {
+      display: flex;
+      align-items: center;
+      width: 15%;
+      color: white;
+      padding-left: 5%;
+    }
+    .footer_wrapper_info {
+      width: 10%;
+      flex-direction: column;
+      color: white;
+      margin-left: 5%;
+      .gray {
+        color: gray;
+        font-weight: bold;
+        font-size: 12px;
+      }
+      li {
+        list-style: none;
+        padding: 20px 0;
+      }
+      .wrapper_info-icons {
+        display: flex;
+        margin-left: 180px;
+
+        .circle {
+          width: 55px;
+          height: 55px;
+          background-color: #222326;
+          border-radius: 50%;
+          margin-right: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .fa {
+            color: white;
+            font-size: 25px;
+            &:hover {
+              color: $hover-color;
+            }
+          }
+        }
+      }
+    }
+  }
+  .footer_info1 {
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding-right: 8%;
+    p {
+      color: #688479;
+      padding-right: 1%;
+      font-weight: bold;
+      font-size: 15px;
+    }
+  }
+  .footer_info2 {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    display: flex;
+
+    width: 100%;
+    li a {
+      color: #688479;
+      font-size: 12px;
+
+      &:hover {
+        color: $hover-color;
+      }
+    }
+    .copy {
+      color: #688479;
+      font-size: 12px;
+      margin-left: 465px;
+    }
+  }
 }
